@@ -1,0 +1,160 @@
+# GitHub Pages Configuration
+# This file is used for Jekyll configuration on GitHub Pages
+
+# Site settings
+title: "Hassan's Portfolio"
+description: "Professional portfolio website showcasing skills, experience, and projects"
+author: "Hassan"
+email: "your.email@example.com"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+theme: minima
+
+# Exclude files from processing
+exclude:
+  - README.md
+  - .gitignore
+  - node_modules
+  - Gemfile
+  - Gemfile.lock
+
+# Include files
+include:
+  - _redirects
+
+# Collections
+collections:
+  projects:
+    output: true
+    permalink: /:collection/:name/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: "project"
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# SEO
+seo:
+  type: "Person"
+  name: "Hassan"
+  description: "Professional Developer & Problem Solver"
+  url: "https://yourusername.github.io/portfolio"
+  image: "/assets/images/profile.jpg"
+  twitter:
+    username: "yourusername"
+  social:
+    name: "Hassan"
+    links:
+      - "https://github.com/yourusername"
+      - "https://linkedin.com/in/yourusername"
+      - "mailto:your.email@example.com"
+
+# Navigation
+navigation:
+  - title: "Home"
+    url: "/"
+  - title: "About"
+    url: "/#about"
+  - title: "Skills"
+    url: "/#skills"
+  - title: "Experience"
+    url: "/#experience"
+  - title: "Projects"
+    url: "/#projects"
+  - title: "Contact"
+    url: "/#contact"
+
+# Social links
+social_links:
+  github: "https://github.com/yourusername"
+  linkedin: "https://linkedin.com/in/yourusername"
+  twitter: "https://twitter.com/yourusername"
+  email: "mailto:your.email@example.com"
+
+# Analytics (uncomment and add your tracking ID)
+# google_analytics: "GA_TRACKING_ID"
+
+# Comments (uncomment if using Disqus)
+# disqus:
+#   shortname: "your-disqus-shortname"
+
+# Pagination
+paginate: 5
+paginate_path: "/page:num/"
+
+# Timezone
+timezone: "UTC"
+
+# Encoding
+encoding: "utf-8"
+
+# Safe mode
+safe: true
+
+# Source directory
+source: "."
+
+# Destination directory
+destination: "_site"
+
+# Incremental build
+incremental: true
+
+# Future posts
+future: false
+
+# Unpublished posts
+unpublished: false
+
+# Limit posts
+limit_posts: 0
+
+# Show drafts
+show_drafts: false
+
+# Keep files
+keep_files: []
+
+# Liquid
+liquid:
+  error_mode: warn
+  strict_filters: false
+  strict_variables: false
+
+# Sass
+sass:
+  style: compressed
+  sass_dir: _sass
+
+# Kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  enable_coderay: false
+
